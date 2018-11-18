@@ -1,0 +1,27 @@
+{
+  "name": "webFEF-final",
+  "version": "1.0.0",
+  "description": "## Final",
+  "main": "/app/js/scripts.js",
+  "scripts": {
+    "sassy": "node-sass --watch \"scss/styles.scss\" --recursive --output \"app/css\" --expanded --source-map true",
+    "start": "browser-sync start --server \"app\" --files \"app\"",
+    "boom!": "concurrently \"npm run start\" \"npm run sassy\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knewyousir/webFEF-final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knewyousir/webFEF-final/issues"
+  },
+  "browser-sync": "^2.26.3",
+  "homepage": "https://github.com/knewyousir/webFEF-final#readme",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "node-sass": "^4.10.0"
+  }
+}
