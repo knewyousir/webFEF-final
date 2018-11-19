@@ -1,0 +1,41 @@
+#body {
+    box-sizing: border-box;
+    background-color: $bg;
+    margin: $def-marg;
+    padding: $def-padd;
+    font-family: Georgia, serif;
+    a {
+        color: $text;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $hover;
+    }
+    p {
+        color: $text;
+    }
+    // Grid layout
+    display: grid;
+    grid-template: auto auto auto / auto;
+    #nav {
+        box-sizing: border-box;
+        margin: $def-marg;
+        border: 2px solid black;
+        padding: $def-padd;
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    #content {
+        box-sizing: border-box;
+        margin: $def-marg;
+        border: 2px solid black;
+        padding: $def-padd;
+        grid-area: 2 / 1 / 7 / 6;
+    }
+    #footer {
+        box-sizing: border-box;
+        margin: $def-marg;
+        border: 2px solid black;
+        padding: $def-padd;
+        grid-area: 7 / 1 / 8 / 6;
+    }
+}

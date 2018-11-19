@@ -1,0 +1,22 @@
+#footer {
+    //
+    padding: 2px;
+    border: 2px solid black;
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        padding: 2px;
+        margin: 2px;
+    }
+    a:hover {
+        border: $def-bord;
+        background-color: $hover-bg;
+        box-shadow: 1px 1px $text;
+    }
+}

@@ -1,0 +1,90 @@
+#nav {
+    //
+    #navFlex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            box-sizing: border-box;
+            padding: 1px;
+            margin: 1px;
+        }
+        a {
+            padding: $def-padd;
+            margin: $def-marg;
+        }
+        a #hamb {
+            //
+        }
+        #refresh {
+            display: inline-block;
+            box-sizing: border-box;
+            font-style: italic;
+            font-size: x-small;
+            padding: 2px;
+            border: 1px solid black;
+            margin: 2px;
+            img {
+                vertical-align: middle;
+            }
+        }
+        #refresh:hover {
+            background-color: $hover-bg;
+            box-shadow: 1px 1px $text;
+            img {
+                filter: invert(100%);
+            }
+        }
+        h1 {
+            max-width: 59%;
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: large;
+            font-weight: bolder;
+        }
+    }
+}
+
+#accordion {
+    transform: translateY(-500px);
+    max-height: 0px;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+    
+    position: sticky;
+    width: 100%;
+}
+
+.active{
+    #accordion{
+        display: block;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: $bg;
+        // box-sizing: border-box;
+        margin: -3px;
+        border: 2px solid black;
+        position: absolute;
+        width: calc(97% + 2px);
+        transform: translateY(0);
+        max-height: 1000px;
+        opacity: 1;
+        z-index: 2;
+        li {
+            box-sizing: border-box;
+            padding: 4px;
+            border: $def-bord;
+            margin: 2px;
+            // width: auto;
+            font-size: x-large;
+            a {
+                display: inline-block;
+                width: 100%;
+            }
+            a:hover {
+                color: #635900;
+                background-color: lightgray;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+#content {
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr 1fr 1fr 1fr 1fr;
+    @media screen and (min-width: $br-med) {
+        grid-template: auto auto auto auto auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (min-width: $br-lrg) {
+        grid-template: auto auto auto auto auto / 1fr 1fr 1fr 1fr;
+    }
+    #heading {
+        grid-area: 1 / 1 / 3 / 3;
+        box-sizing: border-box;
+        padding: $def-padd;
+        border: 2px solid black;
+        margin: $def-marg;
+        @media screen and (min-width: $br-med) {
+            grid-area: 1 / 1 / 3 / 3;
+        }
+        @media screen and (min-width: $br-lrg) {
+            grid-area: 1 / 1 / 3 / 2;
+        }
+    }
+    #visual {
+        grid-area: 1 / 3 / 3 / 6;
+        box-sizing: border-box;
+        padding: $def-padd;
+        border: 2px solid black;
+        margin: $def-marg;
+        @media screen and (min-width: $br-med) {
+            grid-area: 1 / 3 / 3 / 7;
+        }
+        @media screen and (min-width: $br-lrg) {
+            grid-area: 1 / 2 / 3 / 5;
+        }
+    }
+    #article {
+        grid-area: 3 / 1 / 6 / 6;
+        box-sizing: border-box;
+        padding: $def-padd;
+        border: 2px solid black;
+        margin: $def-marg;
+        @media screen and (min-width: $br-med) {
+            grid-area: 3 / 1 / 6 / 7;
+        }
+        @media screen and (min-width: $br-lrg) {
+            grid-area: 3 / 1 / 6 / 5;
+        }
+    }
+    #heading {
+        display: flex;
+        flex-direction: column;
+        // align-items: stretch;
+        h1 {
+            padding: 2px;
+            margin: 2px;
+            text-transform: uppercase;
+            font-size: initial;
+        }
+        h2 {
+            padding: 2px;
+            margin: 2px;
+            font-size: small;
+        }
+        h3 {
+            padding: 2px;
+            margin: 2px;
+            font-size: smaller;
+        }
+        div{
+            p {
+                padding: 2px;
+                margin: 2px;
+                font-size: large;
+                font-style: italic;
+                @media screen and (max-width: $br-med) {
+                    display: none;
+                }
+                @media screen and (min-width: $br-med) {
+                    padding-top: 1em;
+                }
+                @media screen and (min-width: $br-lrg) {
+                    padding-top: 4em;
+                }
+            }
+        }
+    }
+    #visual {
+        box-sizing: border-box;
+        position: relative;
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        figcaption {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: auto;
+            max-width: 80%;
+            overflow: hidden;
+            left: 0;
+            bottom: 0;
+            padding: 4px;
+            margin: 4px;
+            z-index: 1;
+            font-size: xx-small;
+            background: $bg;
+            @media screen and (min-width: $br-med) {
+                font-size: x-small;
+            }
+            @media screen and (min-width: $br-lrg) {
+                font-size: smaller;
+            }
+        }
+    }
+}
