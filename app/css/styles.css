@@ -197,7 +197,7 @@ table {
   margin: -3px;
   border: 2px solid black;
   position: absolute;
-  width: calc(97% + 2px);
+  width: calc(100% - 10px);
   -webkit-transform: translateY(0);
           transform: translateY(0);
   max-height: 1000px;
@@ -215,8 +215,9 @@ table {
 }
 
 .active #accordion li a {
-  display: inline-block;
+  display: block;
   width: 100%;
+  height: 100%;
 }
 
 .active #accordion li a:hover {
@@ -355,6 +356,15 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 1.1;
+      -ms-flex-positive: 1.1;
+          flex-grow: 1.1;
 }
 
 #content #heading h1 {
@@ -364,16 +374,52 @@ table {
   font-size: initial;
 }
 
+@media screen and (min-width: 540px) {
+  #content #heading h1 {
+    font-size: larger;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #content #heading h1 {
+    font-size: xx-large;
+  }
+}
+
 #content #heading h2 {
   padding: 2px;
   margin: 2px;
   font-size: small;
 }
 
+@media screen and (min-width: 540px) {
+  #content #heading h2 {
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #content #heading h2 {
+    font-size: x-large;
+  }
+}
+
 #content #heading h3 {
   padding: 2px;
   margin: 2px;
   font-size: smaller;
+}
+
+@media screen and (min-width: 540px) {
+  #content #heading h3 {
+    font-size: initial;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #content #heading h3 {
+    font-size: larger;
+  }
 }
 
 #content #heading div p {
@@ -391,13 +437,13 @@ table {
 
 @media screen and (min-width: 540px) {
   #content #heading div p {
-    padding-top: 1em;
+    font-size: larger;
   }
 }
 
 @media screen and (min-width: 960px) {
   #content #heading div p {
-    padding-top: 4em;
+    font-size: x-large;
   }
 }
 
@@ -439,6 +485,37 @@ table {
 @media screen and (min-width: 960px) {
   #content #visual figcaption {
     font-size: smaller;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  #content #article {
+    font-size: 112.5%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #content #article {
+    font-size: 125%;
+  }
+}
+
+#content #article ::first-letter {
+  font-weight: 900;
+  font-size: 200%;
+  float: left;
+  margin: 1px;
+}
+
+@media screen and (min-width: 540px) {
+  #content #article ::first-letter {
+    font-size: 350%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #content #article ::first-letter {
+    font-size: 500%;
   }
 }
 

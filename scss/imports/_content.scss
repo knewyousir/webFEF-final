@@ -49,22 +49,42 @@
     #heading {
         display: flex;
         flex-direction: column;
-        // align-items: stretch;
+        justify-content: space-evenly;
+        align-items: stretch;
+        flex-grow: 1.1;
         h1 {
             padding: 2px;
             margin: 2px;
             text-transform: uppercase;
             font-size: initial;
+            @media screen and (min-width: $br-med) {
+                font-size: larger;
+            }
+            @media screen and (min-width: $br-lrg) {
+                font-size: xx-large;
+            }
         }
         h2 {
             padding: 2px;
             margin: 2px;
             font-size: small;
+            @media screen and (min-width: $br-med) {
+                font-size: large;
+            }
+            @media screen and (min-width: $br-lrg) {
+                font-size: x-large;
+            }
         }
         h3 {
             padding: 2px;
             margin: 2px;
             font-size: smaller;
+            @media screen and (min-width: $br-med) {
+                font-size: initial;
+            }
+            @media screen and (min-width: $br-lrg) {
+                font-size: larger;
+            }
         }
         div{
             p {
@@ -76,10 +96,10 @@
                     display: none;
                 }
                 @media screen and (min-width: $br-med) {
-                    padding-top: 1em;
+                    font-size: larger;
                 }
                 @media screen and (min-width: $br-lrg) {
-                    padding-top: 4em;
+                    font-size: x-large;
                 }
             }
         }
@@ -111,6 +131,26 @@
             }
             @media screen and (min-width: $br-lrg) {
                 font-size: smaller;
+            }
+        }
+    }
+    #article {
+        @media screen and (min-width: $br-med) {
+            font-size: 112.5%;
+        }
+        @media screen and (min-width: $br-lrg) {
+            font-size: 125%;
+        }
+        ::first-letter {
+            font-weight: 900;
+            font-size: 200%;
+            float: left;
+            margin: 1px;
+            @media screen and (min-width: $br-med) {
+                font-size: 350%;
+            }
+            @media screen and (min-width: $br-lrg) {
+                font-size: 500%;
             }
         }
     }

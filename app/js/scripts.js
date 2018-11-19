@@ -12,6 +12,9 @@ document.addEventListener('click', (e) => {
     }
     else if (e.target.id === "refresh") {
         event.preventDefault();
+        if ((document.querySelector('#nav')).hasAttribute('class', '.active')){
+            (document.querySelector('#nav')).removeAttribute('class', '.active');
+        }
         getData();
     }
 }, false)
@@ -62,9 +65,20 @@ function renderContent(data) {
     articleText.innerHTML = loremCopy;
 }
 
+function updateLinks(data) {
+    var links = document.querySelectorAll('#accordion a');
+    let cnt = 0;
+    links.forEach( (link) => {
+        link.innerHTML = data[cnt].title;
+        cnt += 1;
+    })
+}
+
 var addContent = function (stories) {
     stories = stories.results.slice(0,5);
     jsonResponse = stories;
+    // Update Links
+    updateLinks(jsonResponse);
     // set first item on page
     renderContent(stories[0]);
 }
