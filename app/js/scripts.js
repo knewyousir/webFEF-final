@@ -2,16 +2,16 @@
 
 document.addEventListener('click', (e) => {
 	if (e.target.id == "hambImg") {
-        event.preventDefault();
+        e.preventDefault();
 		unfoldMenu(e.target)
 	}
 	else if ((e.target.id).slice(0,3) === "acc") {
-        event.preventDefault();
+        e.preventDefault();
         renderContent(jsonResponse[(e.target.id.slice(3,4))]);
         (document.querySelector('#nav')).removeAttribute('class', '.active');
     }
     else if (e.target.id === "refresh") {
-        event.preventDefault();
+        e.preventDefault();
         if ((document.querySelector('#nav')).hasAttribute('class', '.active')){
             (document.querySelector('#nav')).removeAttribute('class', '.active');
         }
